@@ -1,106 +1,252 @@
-/* #c4ddff 
-Petit formal script
-Montserrat Alternates
-*/
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-    width: 100vw;
-    height: 100vh;
-    background: #deecff;
-    font-family: 'Sora';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-family: Georgia, 'Arial', 'Times New Roman', Times, serif;
+    background: #fff9de;
+    line-height: 1.6;
 }
 
-/* header/inicio/navegacao */
-.header{
-    margin-top: 110px;
-}
+/* header---------------------------------------- */
 header{
-    background-color: #bed9ff;
+    background: #801f74;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    padding: 20px;
-    margin: 140px;
-    height: 300px;
-    border-radius: 25px;
-    align-items: center;
-    justify-content: center;
+    animation: fadein 2s ease forwards;
 }
 header h1{
-    color: #01429c;
-    margin-bottom: 20px;
+    font-family: 'eb garamond';
+    font-size: 40px;
+    margin-bottom: 0.5rem;
 }
 nav ul{
     list-style: none;
+    padding: 0;
 }
 nav ul li{
     display: inline;
-    margin: 20px;
+    margin: 0 10px;
 }
 nav ul li a{
+    font-family: 'inter';
     text-decoration: none;
-    color: #01429c;
-    transition: color 0.3s, transform 0.4s ease-in-out;
+    color: bisque;
+    transition: transform 0.4s ease, color 0.4s ease;
 }
 nav ul li a:hover{
-    color: #002b68;
+    transform: scale(1.05);
+    color: rgb(206, 153, 84);
     text-decoration: underline;
-    transform: scale(1.2);
+    /* cursor: pointer; */
 }
 section{
-    padding: 1rem;
-    width: 70vw;
-    background: #ebf3ff;
+    padding: 2rem;
+    margin: 1.5rem;
+    background: #fff;
     border-radius: 8px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.container h2{
+    transition: transform 0.4s ease, color 0.5s;
     text-align: center;
+    width: fit-content;
 }
+.container h2:hover{
+    transform: scale(1.15);
+    color: rgb(206, 153, 84);
+}
+/* h2{
+    margin-bottom: 1rem;
+} */
 
-section p {
-    width: 80%;
-    text-align: center;
-}
-
-
-/* sobre mim */
-.sobre{
-    align-items: center;
-    padding: 1rem;
-    border-radius: 8px;
-}
-.sobre h2{
-    margin-bottom: 20px;
-    color: #01429c;
-}
-.sobre p{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
+/* sobre mim---------------------------------- */
 .sobre-mim{
-    gap: 40px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.sobre-mim h2{
+    font-family: 'eb garamond';
+    font-size: 35px;
+    transition: transform 0.4s ease, color 0.5s;
+}
+.sobre-mim h2:hover{
+    transform: scale(1.15);
+    color: rgb(206, 153, 84);
+}
+.sobre-mim p {
+    font-family: 'inter';
+    text-align: center;
+}
+.foto-perfil{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px double rgb(206, 153, 84);
 }
 
-.foto-perfil{
-    width: 120px;
-    height: 120px;
+
+/* projetos--------------------------------- */
+.projs{
+    display: flex;
+    gap: 1rem;
+}
+.container h2{
+    font-family: 'eb garamond';
+    font-size: 30px;
+}
+.proj1, .proj2{
+    background: #f6f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+.proj1 p, .proj2 p{
+    font-family: 'inter';
+}
+.proj1:hover{
+    background: #ffe0de;
+    transform: scale(1.05);
+}
+.proj2:hover{
+    background: #b41d12;
+    transform: scale(1.05);
+}
+.proj h3{
+    font-family: 'eb garamond';
+    transition: color 0.4s;
+}
+.proj h3:hover{
+    color: rgb(206, 153, 84);
+}
+.proj p{
+    font-family: 'inter';
+}
+.foto-proj{
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+
+/* formacao--------------------------------- */
+.formacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
-section#sobre{
-    animation: fadeIn 1s ease-in forwards;
+.form{
+    background: #f6f5f5;
+    /* background: #f6f5f5; */
+    border-radius: 8px;
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+    transition: background 0.5s ease-in-out, transform 0.3s ease-in-out, color 0.3s;
+}
+.form:hover{
+    color: rgb(206, 153, 84);
+    background: #801f74;
+    transform: scale(1.05);
+}
+.f{
+    font-family: 'eb garamond';
+    font-size: 20px;
+    font-weight: 700;
+}
+.form .s{
+    font-family: 'inter';
+}
+
+
+/* skills------------------------------------ */
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.hab{
+    background: #f6f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+    transition: background 0.5s ease-in-out, transform 0.3s ease-in-out, color 0.3s;
+}
+.hab:hover{
+    color: rgb(206, 153, 84);
+    background: #801f74;
+    transform: scale(1.05);
+}
+.f{
+    font-family: 'eb garamond';
+    font-size: 20px;
+    font-weight: 700;
+}
+.hab .s{
+    font-family: 'inter';
+}
+.hab i{
+    font-size: 30px;
+    transition: color 0.5s;
+}
+.hab i:hover{
+    color: #801f74;
+}
+
+
+/* contato------------------------------------- */
+a .github{
+    width: 100px;
+    height: 100px;
+}
+.contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.cont{
+    background: #f6f5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.cont:hover{
+    transform: scale(1.05);
+}
+.cont .s{
+    font-family: 'inter';
+}
+.cont h3{
+    font-family: 'eb garamond';
+    transition: color 0.5s;
+}
+.cont h3:hover{
+    color: #801f74;
+}
+
+@keyframes fadein{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#sobre, #formacao, #projetos, #skills, #contato{
+    animation: fadein 2s ease forwards;
 }
