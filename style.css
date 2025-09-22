@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
     font-family: Georgia, 'Arial', 'Times New Roman', Times, serif;
     background: #fff9de;
-    line-height: 1.6;
+    line-height: 1.6; 
 }
 
 /* header---------------------------------------- */
