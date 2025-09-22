@@ -47,7 +47,7 @@ nav ul li a:hover{
 section{
     padding: 2rem;
     margin: 1.5rem;
-    background: #fff;
+    background: radial-gradient(#fff1df, #fff);
     border-radius: 8px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
@@ -106,7 +106,7 @@ section{
     font-size: 30px;
 }
 .proj1, .proj2{
-    background: #f6f5f5;
+    background: #f8f8f8;
     border-radius: 8px;
     padding: 1rem;
     width: 100%;
@@ -148,12 +148,13 @@ section{
     gap: 1rem;
 }
 .form{
-    background: #f6f5f5;
+    background: #f8f8f8;
     /* background: #f6f5f5; */
     border-radius: 8px;
     padding: 1rem;
     width: 50%;
     text-align: center;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease-in-out, transform 0.3s ease-in-out, color 0.3s;
 }
 .form:hover{
@@ -179,11 +180,12 @@ section{
     gap: 1rem;
 }
 .hab{
-    background: #f6f5f5;
+    background: #f8f8f8;
     border-radius: 8px;
     padding: 1rem;
     width: 50%;
     text-align: center;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease-in-out, transform 0.3s ease-in-out, color 0.3s;
 }
 .hab:hover{
@@ -220,12 +222,13 @@ a .github{
     gap: 1rem;
 }
 .cont{
-    background: #f6f5f5;
+    background: #f8f8f8;
     border-radius: 8px;
     padding: 1rem;
-    width: 50%;
+    width: 80%;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
 .cont:hover{
     transform: scale(1.05);
