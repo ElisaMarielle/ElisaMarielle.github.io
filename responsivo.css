@@ -1,0 +1,12 @@
+@media(max-width: 420px){
+    header{
+        flex-direction: column;
+        padding: 20px;
+    }
+    h1{
+        font-size: 2.3rem;
+    }
+    nav{
+        gap: 10px;
+    }
+}
