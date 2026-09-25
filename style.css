@@ -8,8 +8,10 @@
     --primary: #F5F7FA;
     --secundary: #A9C1F5;
     --accents: #356AE6;
+    --accent2: #91b2ff;
     --details: #DCE5F7;
     --text: #172033;
+    --section: #c2d5ff;
     --white: #FFF;
 }
 
@@ -24,7 +26,7 @@ body{
 }
 header{
     background: #dce5f7ea;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -34,6 +36,7 @@ header{
     top: 0;
     backdrop-filter: blur(3px);
     box-shadow: 0 0 10px #1720335c;
+    z-index: 999;
 }
 svg{
     width: 50px;
@@ -79,12 +82,303 @@ nav a:hover::after{
 /*========================================================*/
 section{
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.line{
+    width: 100px;
+    height: 4px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--details), var(--secundary), var(--accents));
+    margin: 18px 0;
+}
+.hline{
+    background: linear-gradient(90deg, var(--accents), var(--text));
+}
+.title{
+    font-size: 30px;
+    color: var(--text);
+}
+/*========================================================*/
+
+
+
+#sobre{
+    margin-top: 4rem;
+}
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 3px solid var(--secundary);
+    margin-bottom: 10px;
+}
+.sobre h2{
+    font-size: 3rem;
+    color: var(--accents);
+}
+.sobre p{
+    font-size: 18px;
+    color: var(--text);
+    text-align: center;
+    padding: 10px;
+    width: 70%;
+}
+.botoes{
+    display: flex;
+    gap: 20px;
+}
+.botoes a{
+    border: 2px solid var(--accents); border-radius: 60px;
+    padding: 10px 20px;
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--accents);
+    font-size: 20px;
+    font-weight: 600;
+    transition: transform 300ms;
+}
+.botoes a:last-child{
+    border: 2px solid var(--accents); border-radius: 60px;
+    padding: 10px 20px;
+    color: var(--accents);
+    text-decoration: none;
+    background-color: var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 300ms, background-color 300ms;
+}
+.botoes a:hover:last-child{
+    color: var(--white);
+    background-color: var(--accents);
+}
+.botoes a:hover{
+    transform: scale(1.05);
 }
 
 
+/*========================================================*/
+/*=====================HOBBIES=======================*/
+.hobbies{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+.hobbie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--details);
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    color: var(--text);
+    transition: transform 300ms ease-out, box-shadow 300ms;
+}
+.hobbie:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px var(--secundary);
+}
+.hobbie h3{
+    font-size: 20px;
+    color: var(--accents);
+}
+.hicon{
+    font-size: 3rem;
+}
+/*========================================================*/
 
-.habil i{
+
+
+/*========================================================*/
+/*=====================HABILIDADES=======================*/
+#habilidades{
+    background-color: var(--section);
+}
+.habilidades{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+.habil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent2);
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    gap: 10px;
+    background-color: var(--primary);
+    color: var(--text);
+    transition: transform 300ms ease-out;
+}
+.habil:hover{
+    transform: translateY(-3px);
+}
+.habil i, .habil svg{
     font-size: 50px;
     color: var(--secundary);
 }
 /*========================================================*/
+
+
+.projetos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 40px;
+}
+.projeto-card {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background: #8eacf2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.projeto-imagem {
+    position: relative;
+    width: 255px;
+    height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+.imagem-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.45) 35%,
+        rgba(0, 0, 0, 0.20) 65%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+.ver-projeto {
+    position: absolute;
+    left: 28px;
+    bottom: 16px;
+    z-index: 2;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+.ver-projeto span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+.projeto-imagem:hover img {
+    transform: scale(1.06);
+}
+.projeto-imagem:hover .imagem-overlay {
+    opacity: 1;
+}
+.projeto-imagem:hover .ver-projeto {
+    opacity: 1;
+    transform: translateY(0);
+}
+.projeto-imagem:hover .ver-projeto span {
+    transform: translateX(5px);
+}
+.projeto-info {
+    flex: 1;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.projeto-info h3 {
+    margin: 5px 0 30px;
+    color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+}
+.projeto-info p {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 700px) {
+
+    .projeto-card {
+        height: 180px;
+    }
+
+    .projeto-imagem {
+        width: 45%;
+    }
+
+    .projeto-info {
+        padding: 25px 20px;
+    }
+
+    .projeto-info h3 {
+        font-size: 19px;
+        margin-bottom: 18px;
+    }
+
+    .projeto-info p {
+        font-size: 15px;
+    }
+
+    .ver-projeto {
+        left: 18px;
+        bottom: 14px;
+
+        font-size: 14px;
+    }
+}
